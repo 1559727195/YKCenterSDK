@@ -1,0 +1,36 @@
+package com.telink.crypto;
+
+import java.util.UUID;
+
+public enum UuidInformation {
+
+   TELINK_SERVICE("TELINK_SERVICE", 0, UUID.fromString("00010203-0405-0607-0809-0a0b0c0d1910"), "Telink SmartLight Service"),
+   TELINK_CHARACTERISTIC_PAIR("TELINK_CHARACTERISTIC_PAIR", 1, UUID.fromString("00010203-0405-0607-0809-0a0b0c0d1914"), "pair"),
+   TELINK_CHARACTERISTIC_COMMAND("TELINK_CHARACTERISTIC_COMMAND", 2, UUID.fromString("00010203-0405-0607-0809-0a0b0c0d1912"), "command"),
+   TELINK_CHARACTERISTIC_NOTIFY("TELINK_CHARACTERISTIC_NOTIFY", 3, UUID.fromString("00010203-0405-0607-0809-0a0b0c0d1911"), "notify"),
+   TELINK_CHARACTERISTIC_OTA("TELINK_CHARACTERISTIC_OTA", 4, UUID.fromString("00010203-0405-0607-0809-0a0b0c0d1913"), "ota"),
+   SERVICE_DEVICE_INFORMATION("SERVICE_DEVICE_INFORMATION", 5, UUID.fromString("0000180a-0000-1000-8000-00805f9b34fb"), "Device Information Service"),
+   CHARACTERISTIC_FIRMWARE("CHARACTERISTIC_FIRMWARE", 6, UUID.fromString("00002a26-0000-1000-8000-00805f9b34fb"), "Firmware Revision"),
+   CHARACTERISTIC_MANUFACTURER("CHARACTERISTIC_MANUFACTURER", 7, UUID.fromString("00002a29-0000-1000-8000-00805f9b34fb"), "Manufacturer Name"),
+   CHARACTERISTIC_MODEL("CHARACTERISTIC_MODEL", 8, UUID.fromString("00002a24-0000-1000-8000-00805f9b34fb"), "Model Number"),
+   CHARACTERISTIC_HARDWARE("CHARACTERISTIC_HARDWARE", 9, UUID.fromString("00002a27-0000-1000-8000-00805f9b34fb"), "Hardware Revision");
+   private String info;
+   private UUID value;
+   // $FF: synthetic field
+   private static final UuidInformation[] $VALUES = new UuidInformation[]{TELINK_SERVICE, TELINK_CHARACTERISTIC_PAIR, TELINK_CHARACTERISTIC_COMMAND, TELINK_CHARACTERISTIC_NOTIFY, TELINK_CHARACTERISTIC_OTA, SERVICE_DEVICE_INFORMATION, CHARACTERISTIC_FIRMWARE, CHARACTERISTIC_MANUFACTURER, CHARACTERISTIC_MODEL, CHARACTERISTIC_HARDWARE};
+
+
+   private UuidInformation(String var1, int var2, UUID value, String info) {
+      this.value = value;
+      this.info = info;
+   }
+
+   public String getInfo() {
+      return this.info;
+   }
+
+   public UUID getValue() {
+      return this.value;
+   }
+
+}
